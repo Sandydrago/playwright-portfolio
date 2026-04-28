@@ -1,13 +1,16 @@
 from playwright.sync_api import Page
 from pages.base_page import BasePage
+from pages.components.nav_bar import NavBar
 
 class HomePage(BasePage):
+    URL = "https://playwright.dev/"
+
     def __init__(self, page: Page):
         super().__init__(page)
-        self.get_started_button = page.locator("text=Get Started")
+        self.nav = NavBar(page)
 
     def navigate(self):
-        super().navigate("https://playwright.dev/")
+        self.log_step("Navigating to Playwright homepage")
+        super().navigate(self.URL)
+        self.wait_for_page_ready()
 
-    def click_get_started(self):
-        self.get_started_button.click()
