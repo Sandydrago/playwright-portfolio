@@ -1,4 +1,4 @@
-# Root conftest.py
+# Root conftest.py test I'm an idiot
 # This file simply imports fixture modules so pytest auto-discovers them.
 import pytest
 from api.todos_api import TodosAPI
@@ -14,3 +14,12 @@ def config():
 @pytest.fixture
 def todos_api():
     return TodosAPI("https://jsonplaceholder.typicode.com")
+
+pytest_plugins = [
+    "fixtures.auth_context"
+]
+
+pytest_plugins = [
+    "fixtures.auth_context",
+    "fixtures.request_context"
+]
