@@ -1,10 +1,22 @@
 {
     "valid_user": {
         "username": "testuser",
-        "password": "Password123!"
+        "password": "Password123!",
+        "email" : "valid_user@example.com"
     },
     "invalid_user": {
         "username": "wrong",
-        "password": "badpass"
+        "password": "badpass",
+        "email" : "invalid_user@example.com"
+    },
+    "admin": {
+        "username": "admin_user",
+        "password": "AdminPass123!",
+        "email": "admin@example.com"
+    },
+    "standard": {
+        "username": "standard_user",
+        "password": "UserPass123!",
+        "email": "user@example.com"
     }
 }

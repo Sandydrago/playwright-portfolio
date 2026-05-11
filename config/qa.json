@@ -1,0 +1,17 @@
+{
+  "envName": "qa",
+  "ui": {
+    "baseURL": "https://qa.myapp.com"
+  },
+  "api": {
+    "baseURL": "https://qa.api.myapp.com",
+    "auth": {
+      "login": "/auth/login",
+      "refresh": "/auth/refresh"
+    },
+    "users": {
+      "getUser": "/users/{id}",
+      "listUsers": "/users"
+    }
+  }
+}

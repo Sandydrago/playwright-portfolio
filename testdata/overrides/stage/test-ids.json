@@ -1,0 +1,6 @@
+{
+  "login": "TC-001",
+  "addToCart": "TC-002",
+  "checkout": "TC-003",
+  "apiGetUser": "API-001"
+}

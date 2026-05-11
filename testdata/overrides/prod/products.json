@@ -1,0 +1,12 @@
+{
+  "featured": {
+    "id": 101,
+    "name": "UltraWidget 3000",
+    "price": 49.99
+  },
+  "sale": {
+    "id": 202,
+    "name": "BudgetWidget Lite",
+    "price": 19.99
+  }
+}

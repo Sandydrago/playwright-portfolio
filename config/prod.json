@@ -1,0 +1,17 @@
+{
+  "envName": "prod",
+  "ui": {
+    "baseURL": "https://myapp.com"
+  },
+  "api": {
+    "baseURL": "https://api.myapp.com",
+    "auth": {
+      "login": "/auth/login",
+      "refresh": "/auth/refresh"
+    },
+    "users": {
+      "getUser": "/users/{id}",
+      "listUsers": "/users"
+    }
+  }
+}

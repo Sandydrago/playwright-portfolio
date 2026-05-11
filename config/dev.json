@@ -1,0 +1,17 @@
+{
+  "envName": "dev",
+  "ui": {
+    "baseURL": "https://dev.myapp.com"
+  },
+  "api": {
+    "baseURL": "https://dev.api.myapp.com",
+    "auth": {
+      "login": "/auth/login",
+      "refresh": "/auth/refresh"
+    },
+    "users": {
+      "getUser": "/users/{id}",
+      "listUsers": "/users"
+    }
+  }
+}
