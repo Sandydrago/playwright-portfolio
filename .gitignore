@@ -1,1 +1,20 @@
-node_modules/
+# Python
+__pycache__/
+python-api/**/__pycache__/
+*.pyc
+venv/
+
+# Playwright output
+playwright-report/
+test-results/
+screenshots/
+
+# Node
+playwright/node_modules/
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
