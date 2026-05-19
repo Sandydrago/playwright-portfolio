@@ -1,0 +1,13 @@
+{
+  "envName": "qa",
+  "uiBaseUrl": "https://qa.example.com",
+  "apiBaseUrl": "https://qa.example.com/api",
+  "timeouts": {
+    "pageLoad": 30000,
+    "api": 15000
+  },
+  "credentials": {
+    "username": "qa_user",
+    "password": "qa_pass"
+  }
+}

@@ -1,19 +1,17 @@
 import { defineConfig } from '@playwright/test';
-import { loadConfig } from './src/config/config';
+import { loadConfig } from './utils/configLoader';
 
-const envConfig = loadConfig();
-/* console.log("Loaded environment:", envConfig.envName, envConfig.ui.baseURL); */
-
+const env = process.env.ENV || 'qa';
+const configData = loadConfig(env);
 
 export default defineConfig({
+  testDir: './tests',
+  globalSetup: './global-setup.ts',
   use: {
-    baseURL: envConfig.ui.baseURL,
-    trace: 'retain-on-failure',
+    baseURL: configData.uiBaseUrl,
+    actionTimeout: configData.timeouts.pageLoad,
+    trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure'
-  },
-  reporter: [
-    ['html', { open: 'never' }],
-    ['list']
-  ]
+  }
 });

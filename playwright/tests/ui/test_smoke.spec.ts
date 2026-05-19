@@ -1,5 +1,7 @@
 import { test, expect } from '@playwright/test';
-import { HomePage } from '../../src/pages/home_page';
+import { HomePage } from '../../pages/home_page';
+
+test('Home page loads @smoke @ui', async ({ page }) => {
 
 test.describe('Smoke Test', () => {
   test('basic UI smoke test', async ({ page }) => {
@@ -9,4 +11,5 @@ test.describe('Smoke Test', () => {
     await expect(home.header).toBeVisible();
     await expect(page).toHaveTitle(/Home/i);
   });
+});
 });

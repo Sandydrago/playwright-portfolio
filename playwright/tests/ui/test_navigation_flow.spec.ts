@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
-import { HomePage } from '../../src/pages/home_page';
-import { NavigationMenu } from '../../src/pages/navigation_menu';
+import { HomePage } from '../../pages/home_page';
+import { NavigationMenu } from '../../pages/navigation_menu';
 
 test.describe('Navigation Flow', () => {
   test('should navigate through main menu links', async ({ page }) => {

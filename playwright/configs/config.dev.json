@@ -1,0 +1,13 @@
+{
+  "envName": "dev",
+  "uiBaseUrl": "https://dev.example.com",
+  "apiBaseUrl": "https://dev.example.com/api",
+  "timeouts": {
+    "pageLoad": 30000,
+    "api": 15000
+  },
+  "credentials": {
+    "username": "dev_user",
+    "password": "dev_pass"
+  }
+}

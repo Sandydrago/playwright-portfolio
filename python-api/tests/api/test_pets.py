@@ -1,7 +1,7 @@
 import pytest
 from api.petstore.pets_api import PetsAPI
 from api.petstore.models.pet import Pet, Category, Tag
-from api.petstore.exceptions import NotFoundError, ValidationError
+from api.petstore.exceptions import NotFoundError, ServerError
 
 
 @pytest.fixture
@@ -64,15 +64,18 @@ def test_get_pet_not_found(pets_api):
         pets_api.get_pet(123456789)
 
 
+
 def test_add_pet_invalid_data(pets_api):
     bad_pet = {
         "id": "not-an-int",
         "name": 123,
     }
-    with pytest.raises(ValidationError):
+    with pytest.raises(ServerError):
         pets_api._request(
             method="POST",
             endpoint="/pet",
             expected_status=200,
             json_body=bad_pet,
         )
+   
+

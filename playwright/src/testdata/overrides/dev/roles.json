@@ -1,8 +1,0 @@
-{
-  "admin": {
-    "permissions": ["read", "write", "delete", "manage-users"]
-  },
-  "user": {
-    "permissions": ["read"]
-  }
-}
