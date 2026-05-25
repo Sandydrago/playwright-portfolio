@@ -40,11 +40,10 @@ My goal is to show not just that I can write tests, but that I can **architect a
 3. Portfolio Summary
 
 4. Contact / About Me
-```
 
 ---
 
-# ⭐ **Section 1 — Python API Automation Framework**
+# **Section 1 — Python API Automation Framework**
 
 ## **1. Overview**
 
@@ -291,7 +290,7 @@ I approach automation like an engineer — focusing on architecture, maintainabi
 
 If you’d like to connect:
 
-- **Email:** sandy.pencek@gmail.com 
+- **Email:** sandra.ginter.sdet@gmail.com
 - **LinkedIn:** www.linkedin.com/in/sandy-pencek 
 - **GitHub:** github.com/Sandydrago
 
