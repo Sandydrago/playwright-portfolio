@@ -1,5 +1,10 @@
 
-#  **SDET Portfolio — Python API + Playwright UI/API Automation**
+# **SDET Portfolio — Python API + Playwright UI/API Automation**
+
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![Playwright](https://img.shields.io/badge/Playwright-UI%2FAPI-green)
+![pytest](https://img.shields.io/badge/pytest-tested-orange)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)
 
 Welcome to my SDET automation portfolio.  
 I built this repository to demonstrate my ability to design **real-world, scalable, and maintainable automation frameworks** across both backend (API) and frontend (UI) layers.
@@ -13,7 +18,40 @@ My goal is to show not just that I can write tests, but that I can **architect a
 
 ---
 
-# ⭐ **Table of Contents**
+# **Quick Start**
+
+Clone the repo and run either project:
+
+### **Python API Tests**
+```bash
+cd python-api
+pip install -r requirements.txt
+pytest -v
+```
+
+### **Playwright Tests**
+```bash
+cd playwright
+npm install
+npx playwright test
+```
+
+---
+
+#  **Top-Level Folder Structure**
+
+```
+playwright-portfolio/
+│
+├── api/                # Python API client (models + endpoint classes)
+├── python-api/         # Python API automation framework
+├── playwright/         # Playwright UI/API hybrid automation framework
+└── README.md
+```
+
+---
+
+#  **Table of Contents**
 
 ```
 1. Python API Automation Framework
@@ -37,9 +75,12 @@ My goal is to show not just that I can write tests, but that I can **architect a
    7. Trace Viewer Integration
    8. Why This Project Matters
 
-3. Portfolio Summary
+3. CI/CD (Coming Soon)
 
-4. Contact / About Me
+4. Portfolio Summary
+
+5. Contact / About Me
+```
 
 ---
 
@@ -267,7 +308,17 @@ This project shows that I can:
 
 ---
 
-# **Section 3 — Portfolio Summary**
+# **Section 3 — CI/CD (Coming Soon)**
+
+This project will include GitHub Actions workflows for:
+
+- running Playwright tests in parallel  
+- running Python API tests  
+- publishing HTML reports and Playwright traces as artifacts  
+
+---
+
+# **Section 4 — Portfolio Summary**
 
 Together, these two frameworks demonstrate my ability to build automation across both backend and frontend layers using modern tools and real-world engineering practices.
 
@@ -283,17 +334,13 @@ This portfolio reflects how I approach automation as an engineer.
 
 ---
 
-# **Section 4 — Contact / About Me**
+# **Section 5 — Contact / About Me**
 
 Hi, I’m **Sandra**, and I’m passionate about building automation that is clean, reliable, and scalable.  
 I approach automation like an engineer — focusing on architecture, maintainability, and real-world resilience.
 
 If you’d like to connect:
 
-- **Email:** sandra.ginter.sdet@gmail.com
-- **LinkedIn:** www.linkedin.com/in/sandy-pencek 
-- **GitHub:** github.com/Sandydrago
-
----
-
-
+- **Email:** sandra.pencek.sdet@gmail.com  
+- **LinkedIn:** [www.linkedin.com/in/sandy-pencek](http://www.linkedin.com/in/sandy-pencek)  
+- **GitHub:** github.com/Sandydrago  
