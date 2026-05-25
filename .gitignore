@@ -10,6 +10,7 @@ test-results/
 screenshots/
 
 # Node
+node_modules/
 playwright/node_modules/
 
 # VS Code
