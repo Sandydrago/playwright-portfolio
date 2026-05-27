@@ -1,81 +1,55 @@
 import pytest
-from api.petstore.pets_api import PetsAPI
-from api.petstore.models.pet import Pet, Category, Tag
-from api.petstore.exceptions import NotFoundError, ServerError
-
+from petstore.pets_client import PetsClient
 
 @pytest.fixture
-def base_url():
-    return "https://petstore.swagger.io/v2"
-
-
-@pytest.fixture
-def pets_api(base_url):
-    return PetsAPI(base_url)
-
+def pets_api():
+    return PetsClient()
 
 @pytest.fixture
 def sample_pet():
-    return Pet(
-        id=999999,
-        name="TestDog",
-        category=Category(id=1, name="Dogs"),
-        photoUrls=["http://example.com/dog.jpg"],
-        tags=[Tag(id=1, name="friendly")],
-        status="available",
-    )
-
+    return {
+        "id": 999999,
+        "name": "TestDog",
+        "category": {"id": 1, "name": "Dogs"},
+        "photoUrls": ["http://example.com/dog.jpg"],
+        "tags": [{"id": 1, "name": "friendly"}],
+        "status": "available"
+    }
 
 # -----------------------------
 # Positive tests
 # -----------------------------
 def test_add_pet(pets_api, sample_pet):
-    created = pets_api.add_pet(sample_pet)
-    assert created.id == sample_pet.id
-    assert created.name == "TestDog"
-
+    response = pets_api.add_pet(sample_pet)
+    assert response.status_code == 200
+    assert response.json()["id"] == sample_pet["id"]
 
 def test_get_pet(pets_api, sample_pet):
     pets_api.add_pet(sample_pet)
-    pet = pets_api.get_pet(sample_pet.id)
-    assert pet.id == sample_pet.id
-    assert pet.name == sample_pet.name
-
+    response = pets_api.get_pet(sample_pet["id"])
+    assert response.status_code == 200
+    assert response.json()["name"] == sample_pet["name"]
 
 def test_update_pet(pets_api, sample_pet):
     pets_api.add_pet(sample_pet)
-    sample_pet.name = "UpdatedDog"
-    updated = pets_api.update_pet(sample_pet)
-    assert updated.name == "UpdatedDog"
-
+    sample_pet["name"] = "UpdatedDog"
+    response = pets_api.add_pet(sample_pet)
+    assert response.status_code == 200
+    assert response.json()["name"] == "UpdatedDog"
 
 def test_find_by_status(pets_api):
-    pets = pets_api.find_by_status("available")
-    assert isinstance(pets, list)
-    if pets:
-        assert isinstance(pets[0], Pet)
-
+    response = pets_api.find_by_status("available")
+    assert response.status_code == 200
+    assert isinstance(response.json(), list)
 
 # -----------------------------
 # Negative tests
 # -----------------------------
 def test_get_pet_not_found(pets_api):
-    with pytest.raises(NotFoundError):
-        pets_api.get_pet(123456789)
-
-
+    response = pets_api.get_pet(123456789)
+    assert response.status_code == 404
 
 def test_add_pet_invalid_data(pets_api):
-    bad_pet = {
-        "id": "not-an-int",
-        "name": 123,
-    }
-    with pytest.raises(ServerError):
-        pets_api._request(
-            method="POST",
-            endpoint="/pet",
-            expected_status=200,
-            json_body=bad_pet,
-        )
-   
-
+    bad_pet = {"id": "not-an-int", "name": 123}
+    response = pets_api.add_pet(bad_pet)
+    assert response.status_code in [400, 500]

@@ -1,0 +1,24 @@
+{
+  "envName": "prod",
+  "ui": {
+    "baseURL": "https://app.example.com"
+  },
+  "api": {
+    "baseURL": "https://api.example.com",
+    "auth": {
+      "login": "/auth/login",
+      "refresh": "/auth/refresh"
+    },
+    "users": {
+      "getUser": "/users/{id}",
+      "listUsers": "/users"
+    }
+  },
+  "timeouts": {
+    "apiTimeout": 10000,
+    "uiTimeout": 20000
+  },
+  "featureFlags": {
+    "enableBetaFeatures": false
+  }
+}

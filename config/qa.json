@@ -1,0 +1,24 @@
+{
+  "envName": "qa",
+  "ui": {
+    "baseURL": "https://qa.example.com"
+  },
+  "api": {
+    "baseURL": "https://qa.api.example.com",
+    "auth": {
+      "login": "/auth/login",
+      "refresh": "/auth/refresh"
+    },
+    "users": {
+      "getUser": "/users/{id}",
+      "listUsers": "/users"
+    }
+  },
+  "timeouts": {
+    "apiTimeout": 8000,
+    "uiTimeout": 15000
+  },
+  "featureFlags": {
+    "enableBetaFeatures": false
+  }
+}
