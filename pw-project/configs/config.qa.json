@@ -1,7 +1,7 @@
 {
   "envName": "qa",
-  "uiBaseUrl": "https://qa.example.com",
-  "apiBaseUrl": "https://qa.example.com/api",
+  "uiBaseUrl": "https://demo.playwright.dev/todomvc",
+  "apiBaseUrl": "https://jsonplaceholder.typicode.com",
   "timeouts": {
     "pageLoad": 30000,
     "api": 15000

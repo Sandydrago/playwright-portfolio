@@ -2,8 +2,7 @@ import { test as base } from '@playwright/test';
 import { TodosClient } from './client/todosClient';
 import { loadConfig } from '../utils/configLoader';
 
-const env = process.env.ENV || 'qa';
-const config = loadConfig(env);
+const config = loadConfig(); // FIXED — no argument
 
 export const test = base.extend({
   apiClient: async ({ request }, use) => {
@@ -13,3 +12,4 @@ export const test = base.extend({
 });
 
 export const expect = test.expect;
+

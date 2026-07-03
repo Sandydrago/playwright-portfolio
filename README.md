@@ -1,18 +1,17 @@
+---
 
-# **SDET Portfolio — Python API + Playwright UI/API Automation**
-
-![Python](https://img.shields.io/badge/Python-3.11-blue)
-![Playwright](https://img.shields.io/badge/Playwright-UI%2FAPI-green)
-![pytest](https://img.shields.io/badge/pytest-tested-orange)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)
+`https://img.shields.io/badge/Python-3.11-blue`
+`https://img.shields.io/badge/Playwright-UI%2FAPI-green`
+`https://img.shields.io/badge/pytest-tested-orange`
+`https://img.shields.io/badge/TypeScript-5.x-blue`
 
 Welcome to my SDET automation portfolio.  
-I built this repository to demonstrate my ability to design **real-world, scalable, and maintainable automation frameworks** across both backend (API) and frontend (UI) layers.
+This repository demonstrates my ability to design **real-world, scalable, and maintainable automation frameworks** across both backend (API) and frontend (UI) layers.
 
-This portfolio contains two complete automation projects:
+This portfolio contains **two complete automation projects**, each built using industry-standard patterns:
 
-- A **Python API testing framework** with a custom Petstore API client  
-- A **Playwright UI/API hybrid testing framework** using modern best practices  
+- A **Python API testing framework** using a custom Petstore API client  
+- A **Playwright UI/API hybrid testing framework** using Page Objects, fixtures, and environment configs  
 
 My goal is to show not just that I can write tests, but that I can **architect automation systems** the way real engineering teams expect.
 
@@ -22,64 +21,37 @@ My goal is to show not just that I can write tests, but that I can **architect a
 
 Clone the repo and run either project:
 
-### **Python API Tests**
+---
+
+## **Python API Tests**
 ```bash
 cd python-api
 pip install -r requirements.txt
 pytest -v
 ```
 
-### **Playwright Tests**
+---
+
+## **Playwright Tests**
 ```bash
-cd playwright
+cd pw-project
 npm install
 npx playwright test
 ```
 
 ---
 
-#  **Top-Level Folder Structure**
+# **Top-Level Folder Structure**
 
 ```
 playwright-portfolio/
 │
-├── api/                # Python API client (models + endpoint classes)
-├── python-api/         # Python API automation framework
-├── playwright/         # Playwright UI/API hybrid automation framework
+├── api/                # Python API client (Petstore models + endpoint classes)
+├── python-api/         # Python API automation framework (pytest)
+├── pw-project/         # Playwright UI/API hybrid automation framework
+├── test-data/          # Shared test data (if needed)
+├── test-results/       # Playwright output artifacts
 └── README.md
-```
-
----
-
-#  **Table of Contents**
-
-```
-1. Python API Automation Framework
-   1. Overview
-   2. Tech Stack
-   3. Folder Structure
-   4. How to Install & Run Tests
-   5. API Client Overview
-   6. Test Suite Overview
-   7. HTML Reporting (Optional)
-   8. Why This Project Matters
-   9. Future Enhancements
-
-2. Playwright UI/API Hybrid Framework
-   1. Overview
-   2. Tech Stack
-   3. Folder Structure
-   4. Page Object Model (POM)
-   5. Fixtures
-   6. Hybrid UI + API Testing
-   7. Trace Viewer Integration
-   8. Why This Project Matters
-
-3. CI/CD (Coming Soon)
-
-4. Portfolio Summary
-
-5. Contact / About Me
 ```
 
 ---
@@ -88,8 +60,15 @@ playwright-portfolio/
 
 ## **1. Overview**
 
-I built this Python project to demonstrate how I design backend automation using clean architecture, typed models, reusable fixtures, and a custom API client.  
-The framework interacts with the public Petstore API and includes full CRUD coverage for Pets, Users, and Orders.
+This Python project demonstrates backend automation using:
+
+- clean architecture  
+- typed dataclass models  
+- reusable fixtures  
+- a custom API client  
+- full CRUD coverage for Pets, Users, and Orders  
+
+It interacts with the public Petstore API and mirrors real SDK design patterns.
 
 ---
 
@@ -138,7 +117,7 @@ python-api/
 ├── testdata/
 ├── tests/
 │   └── api/
-└── .pytest_cache/
+└── venv/
 ```
 
 ---
@@ -158,7 +137,7 @@ pytest -v
 
 ## **5. API Client Overview**
 
-I built a fully custom API client that includes:
+The custom API client includes:
 
 - typed dataclass models  
 - modular endpoint classes  
@@ -166,7 +145,7 @@ I built a fully custom API client that includes:
 - custom exceptions  
 - defensive JSON parsing  
 
-This mirrors real SDK design.
+This structure mirrors real-world SDK design.
 
 ---
 
@@ -215,7 +194,13 @@ This project demonstrates my ability to:
 
 ## **1. Overview**
 
-I built this Playwright project to demonstrate modern UI automation, API testing, and hybrid workflows using Page Object Model and reusable fixtures.
+This Playwright project demonstrates modern UI automation, API testing, and hybrid workflows using:
+
+- Page Object Model  
+- reusable fixtures  
+- environment-driven configuration  
+- parallel execution  
+- trace viewer debugging  
 
 ---
 
@@ -232,7 +217,7 @@ I built this Playwright project to demonstrate modern UI automation, API testing
 ## **3. Folder Structure**
 
 ```
-playwright/
+pw-project/
 │
 ├── api/
 │   └── client/
@@ -266,19 +251,19 @@ This keeps UI tests clean and maintainable.
 
 ## **5. Fixtures**
 
-I use fixtures for:
+Fixtures provide:
 
 - browser context  
-- authenticated sessions  
 - API context  
 - test data  
-- reporting hooks  
+- reusable setup/teardown  
+- clean dependency injection  
 
 ---
 
 ## **6. Hybrid UI + API Testing**
 
-My hybrid tests demonstrate:
+Hybrid tests demonstrate:
 
 - creating data via API  
 - validating UI behavior  
@@ -343,4 +328,6 @@ If you’d like to connect:
 
 - **Email:** sandra.pencek.sdet@gmail.com  
 - **LinkedIn:** [www.linkedin.com/in/sandy-pencek](http://www.linkedin.com/in/sandy-pencek)  
-- **GitHub:** github.com/Sandydrago  
+- **GitHub:** github.com/Sandydrago
+
+---

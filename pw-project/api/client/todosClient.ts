@@ -5,6 +5,10 @@ export class TodosClient extends BaseClient {
     return this.get('/todos');
   }
 
+  async getTodo(id: number) {
+    return this.get(`/todos/${id}`);
+  }
+
   async createTodo(todo: any) {
     return this.post('/todos', todo);
   }
