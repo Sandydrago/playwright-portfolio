@@ -1,30 +1,41 @@
-SDET Automation Portfolio
-Welcome to my SDET automation portfolio.
-This repository demonstrates my ability to design real-world, scalable, and maintainable automation frameworks across both backend (API) and frontend (UI) layers.
 
-This portfolio contains two complete automation projects, each built using industry-standard patterns:
+📘 SDET Automation Portfolio
 
-Python API Testing Framework using a custom Petstore API client
+Welcome to my SDET automation portfolio.  
+This repository demonstrates my ability to design **real-world, scalable, and maintainable automation frameworks** across both backend (API) and frontend (UI) layers.
 
-Playwright UI/API Hybrid Testing Framework using Page Objects, fixtures, and environment configs
+This portfolio contains **two complete automation projects**, each built using industry-standard patterns:
 
-My goal is to show not just that I can write tests, but that I can architect automation systems the way real engineering teams expect.
+- **Python API Testing Framework** using a custom Petstore API client  
+- **Playwright UI/API Hybrid Testing Framework** using Page Objects, fixtures, and environment configs  
 
-Quick Start
+My goal is to show not just that I can write tests, but that I can **architect automation systems** the way real engineering teams expect.
+
+---
+
+## 🚀 Quick Start
+
 Clone the repo and run either project:
 
-Python API Tests
-Code
+### Python API Tests
+```
 cd python-api
 pip install -r requirements.txt
 pytest -v
-Playwright Tests
-Code
+```
+
+### Playwright Tests
+```
 cd pw-project
 npm install
 npx playwright test
-Top-Level Folder Structure
-Code
+```
+
+---
+
+## 📂 Top-Level Folder Structure
+
+```
 playwright-portfolio/
 │
 ├── api/                # Python API client (Petstore models + endpoint classes)
@@ -33,36 +44,41 @@ playwright-portfolio/
 ├── test-data/          # Shared test data (if needed)
 ├── test-results/       # Playwright output artifacts
 └── README.md
-Section 1 — Python API Automation Framework
-1. Overview
+```
+
+---
+
+# 🐍 Section 1 — Python API Automation Framework
+
+## 1. Overview
+
 This Python project demonstrates backend automation using:
 
-clean architecture
-
-typed dataclass models
-
-reusable fixtures
-
-a custom API client
-
-full CRUD coverage for Pets, Users, and Orders
+- clean architecture  
+- typed dataclass models  
+- reusable fixtures  
+- a custom API client  
+- full CRUD coverage for Pets, Users, and Orders  
 
 It interacts with the public Petstore API and mirrors real SDK design patterns.
 
-2. Tech Stack
-Python 3.11+
+---
 
-pytest
+## 2. Tech Stack
 
-requests
+- Python 3.11+  
+- pytest  
+- requests  
+- dataclasses-json  
+- pytest-html (optional)
 
-dataclasses-json
+---
 
-pytest-html (optional)
+## 3. Folder Structure
 
-3. Folder Structure
-API Client (root-level)
-Code
+### API Client (root-level)
+
+```
 api/
 │
 ├── petstore/
@@ -80,8 +96,11 @@ api/
 │   └── __init__.py
 │
 └── __init__.py
-Python Test Framework
-Code
+```
+
+### Python Test Framework
+
+```
 python-api/
 │
 ├── config/
@@ -90,94 +109,105 @@ python-api/
 ├── tests/
 │   └── api/
 └── venv/
-4. How to Install & Run Tests
-Code
+```
+
+---
+
+## 4. How to Install & Run Tests
+
+```
 git clone <repo>
 cd python-api
 python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
 pytest -v
-5. API Client Overview
+```
+
+---
+
+## 5. API Client Overview
+
 The custom API client includes:
 
-typed dataclass models
-
-modular endpoint classes
-
-centralized request/response handling
-
-custom exceptions
-
-defensive JSON parsing
+- typed dataclass models  
+- modular endpoint classes  
+- centralized request/response handling  
+- custom exceptions  
+- defensive JSON parsing  
 
 This structure mirrors real-world SDK design.
 
-6. Test Suite Overview
+---
+
+## 6. Test Suite Overview
+
 The test suite includes:
 
-CRUD tests for Pets, Users, Orders
+- CRUD tests for Pets, Users, Orders  
+- negative scenarios  
+- data-driven tests  
+- reusable fixtures  
+- clean assertions  
 
-negative scenarios
+---
 
-data-driven tests
+## 7. HTML Reporting (Optional)
 
-reusable fixtures
-
-clean assertions
-
-7. HTML Reporting (Optional)
-Code
+```
 pytest --html=report.html --self-contained-html
-8. Why This Project Matters
+```
+
+---
+
+## 8. Why This Project Matters
+
 This project demonstrates my ability to:
 
-build maintainable automation architecture
+- build maintainable automation architecture  
+- work with real, inconsistent APIs  
+- design clean, typed Python code  
+- validate backend systems thoroughly  
 
-work with real, inconsistent APIs
+---
 
-design clean, typed Python code
+## 9. Future Enhancements
 
-validate backend systems thoroughly
+- schema validation  
+- retry logic  
+- expanded negative testing  
+- CI/CD integration  
+- logging middleware  
 
-9. Future Enhancements
-schema validation
+---
 
-retry logic
+# 🎭 Section 2 — Playwright UI/API Hybrid Framework
 
-expanded negative testing
+## 1. Overview
 
-CI/CD integration
-
-logging middleware
-
-Section 2 — Playwright UI/API Hybrid Framework
-1. Overview
 This Playwright project demonstrates modern UI automation, API testing, and hybrid workflows using:
 
-Page Object Model
+- Page Object Model  
+- reusable fixtures  
+- environment-driven configuration  
+- parallel execution  
+- trace viewer debugging  
 
-reusable fixtures
+---
 
-environment-driven configuration
+## 2. Tech Stack
 
-parallel execution
+- Playwright Test (TypeScript)  
+- Node.js  
+- POM architecture  
+- API request context  
+- Trace viewer  
 
-trace viewer debugging
+---
 
-2. Tech Stack
-Playwright Test (TypeScript)
+## 3. Folder Structure
 
-Node.js
-
-POM architecture
-
-API request context
-
-Trace viewer
-
-3. Folder Structure
-Code
+```
 pw-project/
 │
 ├── api/
@@ -193,91 +223,100 @@ pw-project/
 │   ├── ui/
 │   └── hybrid/
 └── utils/
-4. Page Object Model (POM)
+```
+
+---
+
+## 4. Page Object Model (POM)
+
 Each page class includes:
 
-locators
-
-actions
-
-assertions
-
-navigation helpers
+- locators  
+- actions  
+- assertions  
+- navigation helpers  
 
 This keeps UI tests clean and maintainable.
 
-5. Fixtures
+---
+
+## 5. Fixtures
+
 Fixtures provide:
 
-browser context
+- browser context  
+- API context  
+- test data  
+- reusable setup/teardown  
+- clean dependency injection  
 
-API context
+---
 
-test data
+## 6. Hybrid UI + API Testing
 
-reusable setup/teardown
-
-clean dependency injection
-
-6. Hybrid UI + API Testing
 Hybrid tests demonstrate:
 
-creating data via API
-
-validating UI behavior
-
-cleaning up via API
-
-verifying state changes
+- creating data via API  
+- validating UI behavior  
+- cleaning up via API  
+- verifying state changes  
 
 This mirrors how modern SDET teams test complex systems.
 
-7. Trace Viewer Integration
-Code
+---
+
+## 7. Trace Viewer Integration
+
+```
 npx playwright show-trace trace.zip
-8. Why This Project Matters
+```
+
+---
+
+## 8. Why This Project Matters
+
 This project shows that I can:
 
-build scalable UI automation
+- build scalable UI automation  
+- combine UI and API layers  
+- design maintainable Playwright architecture  
+- debug using trace viewer  
 
-combine UI and API layers
+---
 
-design maintainable Playwright architecture
+# 🔧 Section 3 — CI/CD (Coming Soon)
 
-debug using trace viewer
-
-Section 3 — CI/CD (Coming Soon)
 This project will include GitHub Actions workflows for:
 
-running Playwright tests in parallel
+- running Playwright tests in parallel  
+- running Python API tests  
+- publishing HTML reports and Playwright traces as artifacts  
 
-running Python API tests
+---
 
-publishing HTML reports and Playwright traces as artifacts
+# 🧩 Section 4 — Portfolio Summary
 
-Section 4 — Portfolio Summary
 Together, these two frameworks demonstrate my ability to build automation across both backend and frontend layers using modern tools and real-world engineering practices.
 
 I focus on:
 
-architecture
-
-maintainability
-
-clarity
-
-resilience
-
-scalability
+- architecture  
+- maintainability  
+- clarity  
+- resilience  
+- scalability  
 
 This portfolio reflects how I approach automation as an engineer.
 
-Section 5 — Contact / About Me
-Hi, I’m Sandra, and I’m passionate about building automation that is clean, reliable, and scalable.
+---
+
+# 👋 Section 5 — Contact / About Me
+
+Hi, I’m Sandra, and I’m passionate about building automation that is clean, reliable, and scalable.  
 I approach automation like an engineer — focusing on architecture, maintainability, and real-world resilience.
 
 If you’d like to connect:
 
-Email: sandra.pencek.sdet@gmail.com
-LinkedIn: www.linkedin.com/in/sandy-pencek  
-GitHub: github.com/Sandydrago
+**Email:** sandra.pencek.sdet@gmail.com  
+**LinkedIn:** `https://www.linkedin.com/in/sandy-pencek` [(linkedin.com in Bing)](https://www.bing.com/search?q="https%3A%2F%2Fwww.linkedin.com%2Fin%2Fsandy-pencek")  
+**GitHub:** [https://github.com/Sandydrago](https://github.com/Sandydrago)
